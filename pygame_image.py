@@ -7,8 +7,10 @@ def main():
     screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("ex01-20230613/fig/pg_bg.jpg")
-    kk_img = pg.image.load("ex01-20230613/fig/3.png")
-    kk_img = pg.transform.flip(kk_img,True,False)
+    kk_img01 = pg.image.load("ex01-20230613/fig/3.png")
+    kk_img01 = pg.transform.flip(kk_img01,True,False)
+    kk_img02 = pg.transform.rotozoom(kk_img01,10,1.0)
+    kk_imgs = [kk_img01, kk_img02]
     tmr = 0
     while True:
         for event in pg.event.get():
